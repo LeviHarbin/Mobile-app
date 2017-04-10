@@ -1,0 +1,36 @@
+package com.example.ltharb8232.firstactivity;
+
+import android.content.res.Resources;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+
+
+
+        //create objects for each item on your interface
+        TextView greet;
+        Button   randombutton;     @Override
+                                  protected void onCreate(Bundle savedInstanceState) {         super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            //connect the objects to each interface item (references)         greet = (TextView) findViewById(R.id.helloTextView);         greet.setText("Hello!");
+
+
+
+        randombutton = (Button) findViewById(R.id.button);
+        greet = (TextView) findViewById (R.id.textView) ;
+            randombutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    greet.setText("You got this article ");
+                }
+            });
+        } }
